@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visit Leticia's Cafe for freshly prepared food, coffee, desserts and a welcoming atmosphere.">
+  <meta name="theme-color" content="#3b2920">
+  <title>Leticia's Cafe | Good Food • Good Mood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-theme="warm">
+  <header class="site-header">
+    <div class="brand-row">
+      <a class="brand" href="#home" aria-label="Leticia's Cafe home">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" onerror="this.style.display='none'">
+        <span><strong>LETICIA'S</strong><small>CAFE · GOOD FOOD, GOOD MOOD</small></span>
+      </a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme">◐ <span>Change theme</span></button>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#events">Events</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content wrap">
+        <p class="eyebrow">WELCOME TO LETICIA'S CAFE</p>
+        <h1>Enjoy Great Food<br><em>&amp; Fresh Coffee</em></h1>
+        <p class="hero-copy">A warm place to relax, connect and enjoy freshly prepared favourites.</p>
+        <div class="hero-actions"><a class="btn" href="#menu">Explore our menu</a><a class="btn btn-outline" href="#contact">Find us</a></div>
+      </div>
+    </section>
+
+    <section class="feature-strip wrap" aria-label="What makes us special">
+      <div><span>✦</span><b>Delicious Menu</b><small>Made with care</small></div>
+      <div><span>☕</span><b>Fresh Coffee</b><small>Every cup matters</small></div>
+      <div><span>⌂</span><b>Relaxing Ambience</b><small>Your happy place</small></div>
+      <div><span>♡</span><b>Friendly Service</b><small>Always welcome</small></div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <div class="section-heading"><p class="eyebrow">A LITTLE ABOUT US</p><h2>A place to feel at home</h2><p>Good moments are even better when shared over good food and a great cup of coffee.</p></div>
+      <div class="about-grid">
+        <img class="about-photo" src="{{ url_for('static', filename='images/interior.png') }}" alt="Warm and welcoming cafe interior">
+        <div class="about-copy"><h3>Welcome to Leticia's Cafe</h3><p>We bring together comforting meals, refreshing drinks and a relaxed atmosphere. Whether you're meeting friends, taking a break or enjoying a treat, we're happy to have you.</p><p>Our goal is simple: thoughtful service, enjoyable food and a space where everyone feels welcome.</p><a class="text-link" href="#contact">Come say hello →</a></div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">MADE FOR YOUR MOMENT</p><h2>Some customer favourites</h2><p>Sample menu ideas — update the names and prices to match the cafe's actual menu.</p></div>
+        <div class="menu-grid">
+          <article class="menu-card"><img src="{{ url_for('static', filename='images/food.png') }}" alt="Grilled meal served with fries"><div><h3>Grilled Chicken &amp; Fries</h3><p>Seasoned grilled chicken served with golden fries.</p><strong>UGX —</strong></div></article>
+          <article class="menu-card"><img src="{{ url_for('static', filename='images/cake.png') }}" alt="Chocolate cake"><div><h3>Chocolate Cake</h3><p>A rich chocolate treat for your sweet moments.</p><strong>UGX —</strong></div></article>
+          <article class="menu-card"><img src="{{ url_for('static', filename='images/coffee.png') }}" alt="Cup of latte coffee"><div><h3>Freshly Brewed Coffee</h3><p>Comfort in every cup, freshly prepared.</p><strong>UGX —</strong></div></article>
+          <article class="menu-card"><img src="{{ url_for('static', filename='images/milkshake.png') }}" alt="Chocolate milkshake"><div><h3>Chocolate Milkshake</h3><p>A cool, creamy drink topped with chocolate.</p><strong>UGX —</strong></div></article>
+          <article class="menu-card"><img src="{{ url_for('static', filename='images/juice.png') }}" alt="Fresh orange juice"><div><h3>Fresh Orange Juice</h3><p>A refreshing citrus drink.</p><strong>UGX —</strong></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="gallery">
+      <div class="section-heading"><p class="eyebrow">TAKE A LOOK AROUND</p><h2>Moments at the cafe</h2></div>
+      <div class="gallery-grid">
+        <img src="{{ url_for('static', filename='images/interior.png') }}" alt="Cafe interior">
+        <img src="{{ url_for('static', filename='images/food.png') }}" alt="Freshly prepared meal">
+        <img src="{{ url_for('static', filename='images/cake.png') }}" alt="Chocolate dessert">
+        <img src="{{ url_for('static', filename='images/customer.png') }}" alt="Customer enjoying coffee">
+        <img src="{{ url_for('static', filename='images/service.png') }}" alt="Friendly cafe service">
+        <img src="{{ url_for('static', filename='images/friends.png') }}" alt="Friends spending time together">
+      </div>
+    </section>
+
+    <section class="review-section" id="reviews">
+      <div class="wrap review-layout">
+        <div><p class="eyebrow">YOUR EXPERIENCE MATTERS</p><h2>What our visitors say</h2><p class="review-intro">Been to Leticia's Cafe? Share your experience with us. Reviews submitted here appear on this page.</p>
+          <div class="review-list">
+            {% for review in reviews %}
+            <article class="review-card"><div class="review-top"><strong>{{ review.name|e }}</strong><span class="stars" aria-label="{{ review.rating }} out of 5 stars">{{ "★" * review.rating }}{{ "☆" * (5-review.rating) }}</span></div><p>{{ review.message|e }}</p><small>{{ review.created_at.strftime("%d %b %Y") }}</small></article>
+            {% else %}
+            <p class="empty-reviews">No reviews yet. Be the first to share your experience.</p>
+            {% endfor %}
+          </div>
+        </div>
+        <form class="review-form" method="POST" action="{{ url_for('home') }}#reviews">
+          <h3>Leave a review</h3><p>Your feedback helps us improve.</p>
+          {% with messages = get_flashed_messages(with_categories=true) %}{% for category, message in messages %}<div class="notice {{ category }}">{{ message }}</div>{% endfor %}{% endwith %}
+          <label for="name">Your name</label><input id="name" name="name" maxlength="80" required placeholder="Enter your name">
+          <label for="rating">Your rating</label><select id="rating" name="rating" required><option value="5">★★★★★ — Excellent</option><option value="4">★★★★☆ — Very good</option><option value="3">★★★☆☆ — Good</option><option value="2">★★☆☆☆ — Fair</option><option value="1">★☆☆☆☆ — Poor</option></select>
+          <label for="message">Your review</label><textarea id="message" name="message" rows="5" minlength="8" maxlength="1000" required placeholder="Tell us about your experience..."></textarea>
+          <div class="trap" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+          <button class="btn" type="submit">Publish review</button><small class="form-note">Please be respectful. Do not include private information.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="section wrap" id="events">
+      <div class="event-banner"><div><p class="eyebrow">MAKE IT A MOMENT</p><h2>Good food. Good company.</h2><p>Ask us about hosting a small get-together or special occasion.</p></div><a class="btn" href="#contact">Enquire with us</a></div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="wrap footer-grid">
+      <div><h2>LETICIA'S CAFE</h2><p>Good Food • Good Mood</p><p>A welcoming place for coffee, food and good company.</p></div>
+      <div><h3>Quick links</h3><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a></div>
+      <div><h3>Contact us</h3><p>Phone: <a href="tel:+256000000000">Add cafe phone number</a></p><p>Email: <a href="mailto:hello@leticiascafe.com">Add cafe email</a></p><p>Location: Add cafe address</p></div>
+      <div><h3>Opening hours</h3><p>Add actual opening days and times</p><p><a href="#home">Back to top ↑</a></p></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Leticia's Cafe. All rights reserved.</div>
+  </footer>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
