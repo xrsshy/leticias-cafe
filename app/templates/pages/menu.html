@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Menu | Leticia's Cafe{% endblock %}
+{% block content %}
+<section class="section menu-section">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow">MADE FOR YOUR MOMENT</p>
+      <h2>Our Customer Favourites</h2>
+      <p>Explore some of the delicious choices at Leticia's Cafe.</p>
+    </div>
+    <div class="menu-grid">
+      <article class="menu-card"><img src="{{ url_for('static', filename='images/food.png') }}" alt="Grilled chicken"><div><h3>Grilled Chicken &amp; Fries</h3><p>Seasoned grilled chicken served with golden fries.</p><strong>UGX —</strong></div></article>
+      <article class="menu-card"><img src="{{ url_for('static', filename='images/cake.png') }}" alt="Chocolate cake"><div><h3>Chocolate Cake</h3><p>A rich chocolate treat for your sweet moments.</p><strong>UGX —</strong></div></article>
+      <article class="menu-card"><img src="{{ url_for('static', filename='images/coffee.png') }}" alt="Coffee"><div><h3>Freshly Brewed Coffee</h3><p>Comfort in every cup, freshly prepared.</p><strong>UGX —</strong></div></article>
+      <article class="menu-card"><img src="{{ url_for('static', filename='images/milkshake.png') }}" alt="Milkshake"><div><h3>Chocolate Milkshake</h3><p>A cool, creamy chocolate drink.</p><strong>UGX —</strong></div></article>
+      <article class="menu-card"><img src="{{ url_for('static', filename='images/juice.png') }}" alt="Orange juice"><div><h3>Fresh Orange Juice</h3><p>A refreshing citrus drink.</p><strong>UGX —</strong></div></article>
+    </div>
+  </div>
+</section>
+{% endblock %}

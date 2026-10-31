@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Gallery | Leticia's Cafe{% endblock %}
+{% block content %}
+<section class="section wrap">
+  <div class="section-heading">
+    <p class="eyebrow">TAKE A LOOK AROUND</p>
+    <h2>Moments at the Cafe</h2>
+    <p>A glimpse of the food, atmosphere and experiences we love sharing.</p>
+  </div>
+  <div class="gallery-grid">
+    <img src="{{ url_for('static', filename='images/interior.png') }}" alt="Cafe interior">
+    <img src="{{ url_for('static', filename='images/food.png') }}" alt="Fresh meal">
+    <img src="{{ url_for('static', filename='images/cake.png') }}" alt="Chocolate dessert">
+    <img src="{{ url_for('static', filename='images/customer.png') }}" alt="Customer enjoying coffee">
+    <img src="{{ url_for('static', filename='images/service.png') }}" alt="Cafe service">
+    <img src="{{ url_for('static', filename='images/friends.png') }}" alt="Friends together">
+  </div>
+</section>
+{% endblock %}

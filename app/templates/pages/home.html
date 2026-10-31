@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Home | Leticia's Cafe{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-shade"></div>
+  <div class="hero-content wrap">
+    <p class="eyebrow">WELCOME TO LETICIA'S CAFE</p>
+    <h1>Enjoy Great Food<br><em>&amp; Fresh Coffee</em></h1>
+    <p class="hero-copy">A warm place to relax, connect and enjoy freshly prepared favourites.</p>
+    <div class="hero-actions">
+      <a class="btn" href="{{ url_for('menu') }}">Explore our menu</a>
+      <a class="btn btn-outline" href="{{ url_for('contact') }}">Find us</a>
+    </div>
+  </div>
+</section>
+<section class="feature-strip wrap">
+  <div><span>✦</span><b>Delicious Menu</b><small>Made with care</small></div>
+  <div><span>☕</span><b>Fresh Coffee</b><small>Every cup matters</small></div>
+  <div><span>⌂</span><b>Relaxing Ambience</b><small>Your happy place</small></div>
+  <div><span>♡</span><b>Friendly Service</b><small>Always welcome</small></div>
+</section>
+<section class="section wrap">
+  <div class="section-heading">
+    <p class="eyebrow">WELCOME</p>
+    <h2>Good Food. Good Mood.</h2>
+    <p>Discover delicious meals, refreshing drinks and beautiful moments at Leticia's Cafe.</p>
+    <a class="btn" href="{{ url_for('about') }}">Discover our story</a>
+  </div>
+</section>
+{% endblock %}

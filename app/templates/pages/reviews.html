@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Customer Reviews | Leticia's Cafe{% endblock %}
+{% block content %}
+<section class="review-section">
+  <div class="wrap review-layout">
+    <div>
+      <p class="eyebrow">YOUR EXPERIENCE MATTERS</p>
+      <h2>What Our Visitors Say</h2>
+      <p class="review-intro">Share your experience with us. Your review helps us improve.</p>
+      <div class="review-list">
+        {% for review in reviews %}
+        <article class="review-card">
+          <div class="review-top">
+            <strong>{{ review.name|e }}</strong>
+            <span class="stars">{{ "★" * review.rating }}{{ "☆" * (5-review.rating) }}</span>
+          </div>
+          <p>{{ review.message|e }}</p>
+          <small>{{ review.created_at.strftime("%d %b %Y") }}</small>
+        </article>
+        {% else %}
+        <p class="empty-reviews">No reviews yet. Be the first to share your experience.</p>
+        {% endfor %}
+      </div>
+    </div>
+    <form class="review-form" method="POST" action="{{ url_for('reviews') }}">
+      <h3>Leave a Review</h3>
+      <p>Your feedback matters to us.</p>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+        <div class="notice {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endwith %}
+      <label for="name">Your name</label>
+      <input id="name" name="name" maxlength="80" required placeholder="Enter your name">
+      <label for="rating">Your rating</label>
+      <select id="rating" name="rating" required>
+        <option value="5">★★★★★ — Excellent</option>
+        <option value="4">★★★★☆ — Very good</option>
+        <option value="3">★★★☆☆ — Good</option>
+        <option value="2">★★☆☆☆ — Fair</option>
+        <option value="1">★☆☆☆☆ — Poor</option>
+      </select>
+      <label for="message">Your review</label>
+      <textarea id="message" name="message" rows="5" minlength="8" maxlength="1000" required placeholder="Tell us about your experience..."></textarea>
+      <div class="trap" aria-hidden="true">
+        <label for="website">Leave this field empty</label>
+        <input id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <button class="btn" type="submit">Publish Review</button>
+      <small class="form-note">Please be respectful. Do not include private information.</small>
+    </form>
+  </div>
+</section>
+{% endblock %}
